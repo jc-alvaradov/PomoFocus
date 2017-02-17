@@ -882,10 +882,16 @@ function translate(){
 	var language;
 	if(langCode === "en"){
 		// load english script
+		document.write("<script src='js/localization/en.js'></script>");
 		language = languageEN;
 	}else if(langCode === "es"){
 		// load spanish script
+		document.write("<script src='js/localization/es.js'></script>");
 		language = languageES;
+	}else if(langCode === "fr"){
+		// load french script
+		document.write("<script src='js/localization/fr.js'></script>");
+		language = languageFR;
 	}
 	for(var i = 0; i < language.length; i++){
 		document.getElementById(language[i].textId).innerHTML = language[i].text;
